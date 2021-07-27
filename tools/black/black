@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+from pathlib import Path
+import runpy
+
+manager = runpy.run_path(Path(__file__).absolute().parent / "setup_venv")["manager"]
+manager.program = "black"
+manager.run()
