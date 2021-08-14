@@ -1,4 +1,4 @@
-from network_changer.platforms import Airport, Windows, OldDBus, DBus, IW
+from network_changer.platforms import Airport, Windows, DBus, IW
 
 import platform
 import shutil
@@ -13,10 +13,7 @@ def changer(final_future, name=None, kls=None):
             kls = Windows
         else:
             if name != "<iw>" and shutil.which("nmcli"):
-                if name == "<olddbus>":
-                    kls = OldDBus
-                else:
-                    kls = DBus
+                kls = DBus
             else:
                 kls = IW
 

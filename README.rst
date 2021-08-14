@@ -19,14 +19,9 @@ On Linux systems with nmcli it'll install sdbus related dbus libraries. You can
 modify that behaviour with these environment variables at pip install:
 
 NETWORK_CHANGER_NO_SDBUS
-  Don't automatically install sdbus
+  Don't automatically install sdbus. If you want sdbus anyway then use::
 
-NETWORK_CHANGER_INSTALL_SDBUS
-  Force sdbus to be installed
-
-NETWORK_CHANGER_INSTALL_OLD_DBUS
-  Force dbus-next to be installed. This code will be deleted once sdbus is done
-  though.
+    > python -m pip instal network_changer[sdbus]
 
 On linux systems without nmcli, you'll need ``libiw-dev`` to be installed for
 network switching to work. You will also need ``sudo`` for all actions with iw

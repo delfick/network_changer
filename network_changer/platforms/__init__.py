@@ -37,7 +37,6 @@ platforms = []
 
 available = [
     (None, "Windows"),
-    ("network_changer.platforms.old_dbus", "OldDBus"),
     ("network_changer.platforms.airport", "Airport"),
     ("network_changer.platforms.dbus", "DBus"),
     ("network_changer.platforms.iw", "IW"),

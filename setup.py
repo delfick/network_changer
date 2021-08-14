@@ -11,20 +11,16 @@ import os
 this_dir = os.path.dirname(__file__) or "."
 
 install_requires = set(["netifaces>=0.11.0"])
-install_requires_available = {"sdbus": "sdbus>=0.8.0", "sdbus-nm": "sdbus-networkmanager==1.1.0", "old_dbus": "dbus-next==0.1.2"}
+install_requires_available = {
+    "sdbus": "sdbus>=0.8.0",
+    "sdbus-nm": "sdbus-networkmanager==1.1.0",
+}
 
 if platform.system() != "Darwin" and platform.system() != "Windows":
     if shutil.which("nmcli"):
         if "NETWORK_CHANGER_NO_SDBUS" not in os.environ:
             install_requires.add(install_requires_available["sdbus"])
             install_requires.add(install_requires_available["sdbus-nm"])
-
-if "NETWORK_CHANGER_INSTALL_SDBUS" in os.environ:
-    install_requires.add(install_requires_available["sdbus"])
-    install_requires.add(install_requires_available["sdbus-nm"])
-
-if "NETWORK_CHANGER_INSTALL_OLD_DBUS" in os.environ:
-    install_requires.add(install_requires_available["old_dbus"])
 
 # fmt: off
 setup(
@@ -45,8 +41,9 @@ setup(
         , "pytest-helpers-namespace==2019.1.8"
         , "mock==4.0.2"
         ]
-      , "old_dbus":
-        [ "dbus-next==0.1.2"
+      , "sdbus":
+        [ install_requires_available["sdbus"]
+        , install_requires_available["sdbus-nm"]
         ]
       }
 
