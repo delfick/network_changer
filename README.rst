@@ -86,6 +86,6 @@ Changelog
 
 .. _release-0.1.0:
 
-0.1.0 - TBD
+0.1.0 - 12 August 2022
     * Initial release
     * Note that there are no unit tests and this code isn't actively used by me
