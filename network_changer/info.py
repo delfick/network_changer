@@ -1,4 +1,3 @@
-from datetime import datetime
 import fnmatch
 import time
 

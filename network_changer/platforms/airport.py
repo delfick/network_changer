@@ -4,7 +4,6 @@ from network_changer.progress import Progress
 from network_changer.shell import Commands
 
 from pathlib import Path
-import time
 
 
 class CouldntFindAirport(NetworkChangerException):

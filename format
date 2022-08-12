@@ -2,7 +2,6 @@
 
 set -e
 
-cd $(git rev-parse --show-toplevel)
+cd "$(git rev-parse --show-toplevel)"
 
-./tools/black/black network_changer
-./tools/black/noy_black $(find tests -name '*.py')
+./tools/black network_changer $(find tests -name '*.py')

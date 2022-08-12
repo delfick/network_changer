@@ -29,17 +29,16 @@ setup(
     , packages = find_packages(include="network_changer.*", exclude=["tests*"])
     , include_package_data = True
 
-    , python_requires = ">= 3.6"
+    , python_requires = ">= 3.7"
 
     , install_requires = list(install_requires)
 
     , extras_require =
       { "tests":
-        [ "noseOfYeti==2.0.2"
-        , "pytest==6.1.2"
-        , "alt-pytest-asyncio==0.5.3"
-        , "pytest-helpers-namespace==2019.1.8"
-        , "mock==4.0.2"
+        [ "noseOfYeti==2.3.1"
+        , "pytest==7.1.2"
+        , "alt-pytest-asyncio==0.6.0"
+        , "pytest-helpers-namespace==2021.12.29"
         ]
       , "sdbus":
         [ install_requires_available["sdbus"]

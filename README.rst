@@ -1,7 +1,7 @@
 Network Changer
 ===============
 
-Some utilities for changing the network you're computer is on
+Some python3.7+ utilities for changing the network you're computer is on
 
 With super thanks to @igo95862 for the sdbus library I use after
 https://github.com/igo95862/python-sdbus/issues/1
@@ -80,3 +80,12 @@ network_manager connect
 
     --ssid <ssid>
         The ssid to connect to
+
+Changelog
+---------
+
+.. _release-0.1.0:
+
+0.1.0 - TBD
+    * Initial release
+    * Note that there are no unit tests and this code isn't actively used by me

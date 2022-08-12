@@ -6,8 +6,6 @@ from network_changer.progress import Progress
 from sdbus_async.networkmanager import (
     NetworkManager,
     NetworkManagerSettings,
-    ActiveConnection,
-    ConnectionState,
     AccessPoint,
     NetworkDeviceWireless,
     NetworkConnectionSettings,

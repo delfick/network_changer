@@ -4,7 +4,13 @@ include = '\.py$'
 exclude = '''
 /(
      \.git
+   | \.tox
    | dist
-   | docs
+   | tools
 )/
 '''
+
+[tool.mypy]
+plugins = 'noseOfYeti.plugins.mypy'
+ignore_missing_imports = true
+exclude = 'tools'
