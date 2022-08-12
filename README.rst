@@ -24,8 +24,8 @@ NETWORK_CHANGER_NO_SDBUS
     > python -m pip instal network_changer[sdbus]
 
 On linux systems without nmcli, you'll need ``libiw-dev`` to be installed for
-network switching to work. You will also need ``sudo`` for all actions with iw
-and for ``wpasupplicant`` to be uninstalled.
+network switching to work. You will also wpasupplicant to be uninstalled and
+you need to use this with ``sudo`` so it may call out to ``iw``.
 
 If you are using nmcli on a raspberry Pi, you'll need to do the following::
 
